@@ -3,12 +3,14 @@ import QRCode from 'qrcode';
 import { X, Copy, Download, Check, ExternalLink } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
+import { buildAttendeeUrl } from '../utils/url';
+
 export default function QRCodeModal({ event, isOpen, onClose }) {
   const canvasRef = useRef(null);
   const [copied, setCopied] = React.useState(false);
   const { addToast } = useApp();
 
-  const attendeeUrl = `${window.location.origin}${window.location.pathname}?role=attendee&event=${event.slug || event.id}`;
+  const attendeeUrl = buildAttendeeUrl(event.slug || event.id);
 
   useEffect(() => {
     if (isOpen && canvasRef.current) {

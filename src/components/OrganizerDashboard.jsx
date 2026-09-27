@@ -4,6 +4,7 @@ import {
   ExternalLink, BarChart3, TrendingUp, Calendar, MapPin, Eye, MousePointerClick
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import { buildAttendeeUrl } from '../utils/url';
 import QRCodeModal from './QRCodeModal';
 import CreateEventModal from './CreateEventModal';
 
@@ -21,10 +22,10 @@ export default function OrganizerDashboard() {
   const totalLinkedInOpens = events.reduce((acc, e) => acc + (e.metrics?.linkedinOpens || 0), 0);
   const totalPhotos = events.reduce((acc, e) => acc + (e.metrics?.photosUploaded || 0), 0);
 
-  const activeAttendeeUrl = `${window.location.origin}${window.location.pathname}?role=attendee&event=${activeEvent.slug || activeEvent.id}`;
+  const activeAttendeeUrl = buildAttendeeUrl(activeEvent.slug || activeEvent.id);
 
   const handleCopyLink = (eventSlug) => {
-    const url = `${window.location.origin}${window.location.pathname}?role=attendee&event=${eventSlug}`;
+    const url = buildAttendeeUrl(eventSlug);
     navigator.clipboard.writeText(url);
     setCopiedLink(true);
     addToast('Attendee link copied to clipboard!', 'success');
