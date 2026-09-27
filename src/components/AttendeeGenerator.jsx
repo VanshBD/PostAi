@@ -158,23 +158,23 @@ export default function AttendeeGenerator() {
   const primaryPhotoUrl = photos[primaryIndex]?.url || null;
 
   return (
-    <div style={{ maxWidth: 1400, margin: '0 auto', padding: '24px 20px' }}>
+    <div className="attendee-container" style={{ maxWidth: 1400, margin: '0 auto', padding: '24px 20px' }}>
       {/* Event Header Banner */}
-      <div className="glass-panel" style={{
+      <div className="glass-panel attendee-banner" style={{
         position: 'relative',
         overflow: 'hidden',
         marginBottom: 28,
         border: '1px solid var(--border-strong)'
       }}>
         {/* Cover backdrop image with gradient overlay */}
-        <div style={{
+        <div className="attendee-cover-backdrop" style={{
           height: 180,
           backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.95)), url(${activeEvent.coverImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }} />
 
-        <div style={{
+        <div className="attendee-banner-content" style={{
           padding: '0 28px 24px 28px',
           marginTop: -50,
           display: 'flex',
@@ -300,14 +300,14 @@ export default function AttendeeGenerator() {
       </div>
 
       {/* Main Studio Grid: Left Inputs vs Right LinkedIn Preview */}
-      <div style={{
+      <div className="studio-grid" style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
         gap: 32,
         alignItems: 'start'
       }}>
         {/* LEFT WORKSPACE: Input Builder */}
-        <div className="glass-panel" style={{ padding: 28 }}>
+        <div className="glass-panel studio-input-panel" style={{ padding: 28 }}>
           <h2 style={{ fontSize: '1.25rem', marginBottom: 20, display: 'flex', alignItems: 'center', gap: 8 }}>
             <Wand2 size={20} color="var(--primary-light)" />
             Share Your Experience

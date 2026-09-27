@@ -38,9 +38,9 @@ export default function OrganizerDashboard() {
   };
 
   return (
-    <div style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 24px' }}>
+    <div className="dashboard-container" style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 24px' }}>
       {/* Top Banner and Quick Actions */}
-      <div style={{
+      <div className="dashboard-header" style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -138,13 +138,13 @@ export default function OrganizerDashboard() {
       </div>
 
       {/* Active Event Spotlight & Share Banner */}
-      <div className="glass-panel" style={{
+      <div className="glass-panel dashboard-spotlight" style={{
         padding: 24,
         marginBottom: 36,
         background: 'linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95))',
         border: '1px solid rgba(56, 189, 248, 0.25)'
       }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
+        <div className="dashboard-spotlight-top" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
           <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
             <img 
               src={activeEvent.coverImage} 

@@ -256,3 +256,139 @@ h1, h2, h3, h4, h5, h6 {
 .toast.error {
   border-left: 4px solid var(--accent-rose);
 }
+
+/* ===================================================
+   MOBILE & TABLET RESPONSIVE DESIGN (Pixel-Perfect)
+   =================================================== */
+
+/* Tablet & Mobile Breakpoints (max-width: 860px) */
+@media (max-width: 860px) {
+  .topnav-header {
+    padding: 10px 16px !important;
+  }
+  
+  .topnav-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .topnav-actions {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .topnav-event-select {
+    flex: 1 !important;
+    min-width: 150px !important;
+  }
+
+  .topnav-event-select select {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .dashboard-container,
+  .attendee-container {
+    padding: 16px 12px !important;
+  }
+
+  .studio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .attendee-banner-content {
+    padding: 0 16px 16px 16px !important;
+    margin-top: -36px !important;
+  }
+
+  .dashboard-spotlight-top {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .dashboard-spotlight-top > div:first-child {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .dashboard-spotlight-top > div:first-child img {
+    width: 100% !important;
+    height: 120px !important;
+  }
+
+  .dashboard-spotlight-top > div:last-child {
+    width: 100% !important;
+  }
+
+  .dashboard-spotlight-top > div:last-child button {
+    flex: 1 !important;
+  }
+}
+
+/* Mobile Screens (max-width: 540px) */
+@media (max-width: 540px) {
+  h1 {
+    font-size: 1.45rem !important;
+    line-height: 1.25 !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .glass-panel {
+    border-radius: var(--radius-md) !important;
+  }
+
+  .studio-input-panel {
+    padding: 16px 14px !important;
+  }
+
+  .role-switcher-wrap {
+    width: 100% !important;
+  }
+
+  .role-switcher-wrap button {
+    flex: 1 !important;
+    justify-content: center !important;
+    padding: 7px 8px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .topnav-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .topnav-event-select {
+    width: 100% !important;
+  }
+
+  .attendee-cover-backdrop {
+    height: 130px !important;
+  }
+
+  .attendee-banner-content {
+    margin-top: -24px !important;
+    padding: 0 12px 14px 12px !important;
+  }
+
+  .btn {
+    padding: 9px 14px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .toast-container {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+  }
+
+  .toast {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    font-size: 0.82rem !important;
+  }
+}

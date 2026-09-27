@@ -6,7 +6,7 @@ export default function TopNav() {
   const { role, setRole, events, activeEventId, setActiveEventId, activeEvent } = useApp();
 
   return (
-    <header style={{
+    <header className="topnav-header" style={{
       position: 'sticky',
       top: 0,
       zIndex: 100,
@@ -16,7 +16,7 @@ export default function TopNav() {
       borderBottom: '1px solid var(--border-subtle)',
       padding: '12px 24px'
     }}>
-      <div style={{
+      <div className="topnav-container" style={{
         maxWidth: 1400,
         margin: '0 auto',
         display: 'flex',
@@ -73,8 +73,8 @@ export default function TopNav() {
         </div>
 
         {/* Event Quick Switcher (when organizer or attendee) */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <div style={{
+        <div className="topnav-actions" style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <div className="topnav-event-select" style={{
             display: 'flex',
             alignItems: 'center',
             background: 'rgba(30, 41, 59, 0.6)',
@@ -107,7 +107,7 @@ export default function TopNav() {
           </div>
 
           {/* Role Switcher Pill */}
-          <div style={{
+          <div className="role-switcher-wrap" style={{
             display: 'inline-flex',
             background: 'rgba(15, 23, 42, 0.9)',
             padding: '3px',
