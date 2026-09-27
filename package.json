@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seed:db": "node scripts/seedMongo.js"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
+    "dotenv": "^18.0.4",
     "lucide-react": "^1.48.0",
+    "mongoose": "^9.10.2",
     "qrcode": "^1.5.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
